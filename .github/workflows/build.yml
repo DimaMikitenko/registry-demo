@@ -11,10 +11,8 @@ jobs:
 
     steps:
 
-      - run: echo "Pipeline started"
+      - run: echo "Pipeline started 2"
 
-      - run: date
-
-      - run: pwd
+      - uses: actions/checkout@v4
 
       - run: ls -la
