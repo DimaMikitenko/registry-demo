@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: registry-demo
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: registry-demo
+
+  template:
+    metadata:
+      labels:
+        app: registry-demo
+
+    spec:
+      containers:
+      - name: registry-demo
+        image: dmtytromykytenko/registry-demo:1.0
+        imagePullPolicy: IfNotPresent
